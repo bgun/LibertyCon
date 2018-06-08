@@ -14,7 +14,7 @@ import {
   View
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import Icon from 'react-native-vector-icons/Entypo';
 
@@ -124,7 +124,7 @@ class DashboardScreen extends Component {
 
 }
 
-export default StackNavigator({
+export default createStackNavigator({
   "Dashboard"   : { screen: DashboardScreen },
   "CustomEvent" : { screen: CustomEventScreen },
   "EventDetail" : { screen: EventDetailScreen }

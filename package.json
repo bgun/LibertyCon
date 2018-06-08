@@ -15,12 +15,17 @@
     "ios": "react-native-scripts ios",
     "test": "jest"
   },
+  "CON_INFO_URL": "https://bgun.github.io/nenji-assets/LibertyCon/con_info.json",
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "expo": "^27.0.1",
     "react": "16.3.1",
-    "react-native": "~0.55.2"
+    "react-native": "~0.55.2",
+    "react-native-htmlview": "^0.12.1",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.2.4"
   }
 }

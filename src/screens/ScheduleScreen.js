@@ -18,7 +18,7 @@ import {
 import moment from 'moment';
 import _ from 'lodash';
 
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import EventItem from '../components/EventItem';
 
@@ -55,7 +55,7 @@ class TrackModal extends Component {
               <TouchableOpacity onPress={ this.props.onCancel } style={ styles.modalCancelBtn }>
                 <Text style={{ color: '#E00' }}>Cancel</Text>
               </TouchableOpacity>
-              { global.Store.getTrackNames().map(track => <TrackItem track={ track } onPress={ this.props.onTrackChange } /> ) }
+              { global.Store.getTrackNames().map(track => <TrackItem key={ track } track={ track } onPress={ this.props.onTrackChange } /> ) }
             </ScrollView>
           </View>
         </View>
@@ -190,7 +190,7 @@ class ScheduleScreen extends Component {
   }
 }
 
-export default StackNavigator({
+export default createStackNavigator({
   "Schedule":     { screen: ScheduleScreen },
   "EventDetail" : { screen: EventDetailScreen },
   "GuestDetail" : { screen: GuestDetailScreen },

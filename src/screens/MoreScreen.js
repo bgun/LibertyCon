@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native'
 
-import { StackNavigator } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 
 import Icon from 'react-native-vector-icons/Entypo';
 
@@ -139,7 +139,7 @@ let styles = StyleSheet.create({
 });
 
 
-export default StackNavigator({
+export default createStackNavigator({
   MoreScreen : { screen: MoreScreen },
   Directions : { screen: DirectionsScreen },
   MoreContent: { screen: MoreContentScreen },

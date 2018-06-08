@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 
-import { StackRouter, TabNavigator, StackNavigator } from 'react-navigation';
+import { StackRouter, createBottomTabNavigator } from 'react-navigation';
 
 import DashboardStack from './DashboardScreen';
 import ScheduleStack  from './ScheduleScreen';
@@ -27,7 +27,7 @@ import Toast from '../components/Toast';
 import DataStore from '../DataStore';
 import globalStyles from '../globalStyles';
 
-let MainNavigator = TabNavigator({
+let MainNavigator = createBottomTabNavigator({
   Home: {
     screen: DashboardStack,
     path: ''

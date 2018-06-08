@@ -13,7 +13,7 @@ import {
   View
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 
 import Icon from 'react-native-vector-icons/Entypo';
 
@@ -71,7 +71,7 @@ class GuestsList extends React.Component {
 
 }
 
-export default StackNavigator({
+export default createStackNavigator({
   "GuestsList"  : { screen: GuestsList },
   "EventDetail" : { screen: EventDetailScreen },
   "GuestDetail" : { screen: GuestDetailScreen }
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   },
   sortButton: {
     alignItems: 'center',
-    background: '#EEE',
+    backgroundColor: '#EEE',
     borderRadius: 10,
     height: 32,
     justifyContent: 'center',
