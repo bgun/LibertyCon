@@ -80,7 +80,7 @@ class DashboardScreen extends Component {
         <ScrollView style={{ flex: 1, flexDirection: 'column' }}>
           <ScrollView horizontal={ true } snapToInterval={ window.width } decelerationRate="fast" ref="headerPhotos">
             { headerPhotos.map((photo, index) => (
-              <View style={{ width: window.width, height: getHeroHeight() }}>
+              <View key={ "photo"+index } style={{ width: window.width, height: getHeroHeight() }}>
                 <Image style={{ height: getHeroHeight(), width: window.width }} source={{
                   uri: photo.src,
                   cache: 'force-cache'
@@ -128,13 +128,6 @@ export default createStackNavigator({
   "Dashboard"   : { screen: DashboardScreen },
   "CustomEvent" : { screen: CustomEventScreen },
   "EventDetail" : { screen: EventDetailScreen }
-}, {
-  navigationOptions: {
-    tabBarLabel: "Home",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="home" size={ 24 } color={ tintColor } />
-    )
-  }
 });
 
 const styles = StyleSheet.create({

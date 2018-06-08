@@ -15,7 +15,7 @@ import {
 
 import { createStackNavigator } from 'react-navigation'
 
-import Icon from 'react-native-vector-icons/Entypo';
+import { Entypo } from '@expo/vector-icons/Entypo';
 
 import GuestItem from '../components/GuestItem';
 
@@ -29,7 +29,7 @@ class GuestsList extends React.Component {
     title: "Guests",
     tabBarLabel: "Guests",
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="users" size={ 24 } color={ tintColor } />
+      <Entypo name="users" size={ 24 } color={ tintColor } />
     )
   };
 
@@ -75,13 +75,6 @@ export default createStackNavigator({
   "GuestsList"  : { screen: GuestsList },
   "EventDetail" : { screen: EventDetailScreen },
   "GuestDetail" : { screen: GuestDetailScreen }
-}, {
-  navigationOptions: {
-    tabBarLabel: "Guests",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="users" size={ 24 } color={ tintColor } />
-    )
-  }
 });
 
 

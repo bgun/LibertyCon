@@ -145,12 +145,4 @@ export default createStackNavigator({
   MoreContent: { screen: MoreContentScreen },
   HotelMap   : { screen: HotelMapScreen },
   Feedback   : { screen: FeedbackScreen }
-}, {
-  navigationOptions: {
-    title: "More",
-    tabBarLabel: "More",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="dots-three-horizontal" size={ 24 } color={ tintColor } />
-    )
-  }
 });

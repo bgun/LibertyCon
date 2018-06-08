@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Entypo';
+import Entypo from '@expo/vector-icons';
 
 import globalStyles from '../globalStyles';
 
@@ -52,7 +52,7 @@ export default class EventItem extends Component {
           </View>
         </View>
         { isTodo ? (
-          <Icon name="star" color={ global.Store.getColor('highlight') } size={20} style={{ paddingTop: 8, paddingRight: 8 }} />
+          <Entypo name="star" color={ global.Store.getColor('highlight') } size={20} style={{ paddingTop: 8, paddingRight: 8 }} />
         ) : null }
       </TouchableOpacity>
     );

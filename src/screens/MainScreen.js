@@ -17,6 +17,8 @@ import {
 
 import { StackRouter, createBottomTabNavigator } from 'react-navigation';
 
+import { Entypo } from '@expo/vector-icons';
+
 import DashboardStack from './DashboardScreen';
 import ScheduleStack  from './ScheduleScreen';
 import GuestsStack    from './GuestsScreen';
@@ -26,6 +28,13 @@ import Toast from '../components/Toast';
 
 import DataStore from '../DataStore';
 import globalStyles from '../globalStyles';
+
+const iconNameMap = {
+  "Home" : "home",
+  "Schedule": "calendar",
+  "Guests": "users",
+  "More": "dots-three-horizontal"
+};
 
 let MainNavigator = createBottomTabNavigator({
   Home: {
@@ -45,6 +54,12 @@ let MainNavigator = createBottomTabNavigator({
     path: 'more'
   }
 }, {
+  navigationOptions: ({ navigation }) => ({
+    tabBarIcon: ({ focused, tintColor }) => {
+      const { routeName } = navigation.state;
+      return <Entypo name={ iconNameMap[routeName] } size={ 24 } color={ tintColor } />;
+    }
+  }),
   tabBarPosition: 'bottom',
   tabBarOptions: {
     activeTintColor: '#333',
