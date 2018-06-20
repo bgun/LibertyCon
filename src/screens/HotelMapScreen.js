@@ -15,8 +15,6 @@ import {
   View
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Entypo';
-
 import globalStyles from '../globalStyles';
 
 let window = Dimensions.get('window');
@@ -107,7 +105,6 @@ export default class HotelMapScreen extends React.Component {
   render() {
     const HOTEL_MAP_WIDTH  = global.Store.getDimension('HOTEL_MAP_WIDTH');
     const HOTEL_MAP_HEIGHT = global.Store.getDimension('HOTEL_MAP_HEIGHT');
-    const scale = this.state.scale;
     
     return (
       <ScrollView style={ styles.container }
@@ -116,7 +113,7 @@ export default class HotelMapScreen extends React.Component {
         bounces={ false }
       >
         <Image
-          style={[ styles.map, { width: HOTEL_MAP_WIDTH * scale, height: HOTEL_MAP_HEIGHT * scale, left: this.state.mapX, top: this.state.mapY } ]}
+          style={[ styles.map, { width: HOTEL_MAP_WIDTH, height: HOTEL_MAP_HEIGHT, left: this.state.mapX, top: this.state.mapY } ]}
           source={{ uri: global.Store.getImage('HOTEL_MAP') }}
         />
       </ScrollView>

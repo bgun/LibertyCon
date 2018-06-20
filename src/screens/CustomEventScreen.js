@@ -17,8 +17,6 @@ import {
 
 import globalStyles from '../globalStyles';
 
-import Icon from 'react-native-vector-icons/Entypo';
-
 import GuestItem from '../components/GuestItem';
 import LabelColorPicker from '../components/LabelColorPicker';
 import { H1, H2, H3, H4 } from '../components/Headings';
@@ -27,14 +25,6 @@ const FORM_INVALID_COLOR = '#DD0000AA';
 
 
 export default class CustomEventScreen extends Component {
-
-  static navigationOptions = {
-    title: "Create Custom To-Do",
-    tabBarLabel: "Home",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="home" size={ 24 } color={ tintColor } />
-    )
-  };
 
   constructor(props) {
     super();

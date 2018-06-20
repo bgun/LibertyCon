@@ -1,5 +1,28 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "name": "LibertyCon",
+    "icon": "./assets/icon_1200.png",
+    "version": "4.0.0",
+    "slug": "libertycon",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#000000"
+    },
+    "loading": {
+      "hideExponentText": true
+    },
+    "ios": {
+      "bundleIdentifier": "com.con-nexus.app.LibertyCon",
+      "buildNumber": "1",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.connexus.app.libertycon2",
+      "permissions": [],
+      "versionCode": 40003
+    },
+    "orientation": "portrait"
   }
 }
+

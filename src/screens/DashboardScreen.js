@@ -16,7 +16,7 @@ import {
 
 import { createStackNavigator } from 'react-navigation';
 
-import Icon from 'react-native-vector-icons/Entypo';
+import { Entypo } from '@expo/vector-icons';
 
 import _ from 'lodash';
 
@@ -88,7 +88,7 @@ class DashboardScreen extends Component {
 
                 { index < headerPhotos.length - 1 ? (
                   <View style={{ backgroundColor: "black", opacity: 0.3, position: 'absolute', right: 3, top: (getHeroHeight() / 2)-40, paddingHorizontal: 2, paddingVertical: 15, borderRadius: 10 }}>
-                    <Icon size={ 20 } name="chevron-right" color="white" />
+                    <Entypo size={ 20 } name="chevron-right" color="white" />
                   </View>
                 ) : null }
 

@@ -15,8 +15,6 @@ import {
 
 import { createStackNavigator } from 'react-navigation'
 
-import { Entypo } from '@expo/vector-icons/Entypo';
-
 import GuestItem from '../components/GuestItem';
 
 import GuestDetailScreen from './GuestDetailScreen';
@@ -24,14 +22,6 @@ import EventDetailScreen from './EventDetailScreen';
 
 
 class GuestsList extends React.Component {
-
-  static navigationOptions = {
-    title: "Guests",
-    tabBarLabel: "Guests",
-    tabBarIcon: ({ tintColor }) => (
-      <Entypo name="users" size={ 24 } color={ tintColor } />
-    )
-  };
 
   constructor() {
     super();
